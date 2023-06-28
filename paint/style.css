@@ -110,6 +110,11 @@
   height: 40px;
   padding: 0 24px;
 }
+.wrapper .content .creations header button:hover {
+  background-color: hsl(0, 0%, 100%);
+  border: solid 2px hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+}
 .wrapper .content .creations .gallery {
   gap: 10px;
 }

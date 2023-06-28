@@ -119,6 +119,11 @@
                     color: $White;
                     height: 40px;
                     padding: 0 24px;
+                    &:hover {
+                        background-color: $White;
+                        border: solid 2px $Black;
+                        color: $Black;
+                    }
                 }
             }
             .gallery {
