@@ -178,6 +178,9 @@
 .wrapper .maid div nav li a:hover::after {
   width: 50%;
 }
+.wrapper .maid div .address {
+  color: hsl(0, 0%, 55%);
+}
 
 @media screen and (max-width: 600px) {
   .wrapper .home {
