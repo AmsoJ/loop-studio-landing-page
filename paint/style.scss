@@ -1,0 +1,353 @@
+@import './color';
+
+@font-face {
+    font-family: alata;
+    src: url(./Alata-Regular.ttf);
+}
+
+@font-face {
+    font-family: josefin;
+    src: url(./JosefinSans-Light.ttf);
+}
+
+// global
+.isReveal {
+    clip-path: circle(10px at 80% 90%);
+    transition: clip-path 2s;
+}
+.reveal {
+    clip-path: circle(100% at 50% 50%);
+}
+.wrapper {
+    min-height: 100vh;
+    .home {
+        height: 100vh;
+        background-image: url(./../images/desktop/image-hero.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 70px 100px;
+        .master {
+            .compass {
+                .menu-close {
+                    display: none;
+                }
+                .point {
+                    a {
+                        font-family: alata;
+                        text-decoration: none;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -10px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            border-radius: 20px;
+                            background-color: $White;
+                            width: 0px;
+                            height: 5px;
+                            transition: .5s;
+                        }
+                        &:hover {
+                            &::after {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-op {
+                display: none;
+            }
+        }
+        .poster {
+            // background-color: white;
+            height: 100%;
+            .poster-main {
+                height: min-content;
+                border: 3px $White solid;
+                .title {
+                    font-size: 4vw;
+                    font-family: alata;
+                }
+            }
+        }
+    }
+    .content {
+        min-height: 50vh;
+        background-color: $White;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 200px;
+        .about {
+            min-height: 400px;
+            .pictogram {
+                background-image: url(./../images/desktop/image-interactive.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .pictogram-explanation {
+                position: absolute;
+                min-height: min-content;
+                bottom: 0;
+                right: 0;
+                background-color: $White;
+                .explain-title {
+                    font-family: josefin;
+                    font-size: 3vw;
+                    color: $Very-Dark-Gray;
+                }
+                .explanation-text {
+                    font-family: josefin;
+                    color: $Dark-Gray;
+                    font-size: 15px;
+                }
+            }
+        }
+        .creations {
+            margin-top: 100px;
+            header {
+                .creations-title {
+                    font-family: josefin;
+                    font-size: 3vw;
+                    color: $Black;
+                }
+                button {
+                    background-color: $Black;
+                    font-family: alata;
+                    border: none;
+                    color: $White;
+                    height: 40px;
+                    padding: 0 24px;
+                }
+            }
+            .gallery {
+                gap: 10px;
+                .single {
+                    width: calc(25% - 15px);
+                    height: 500px;
+                    background-position: center;
+                    background-size: cover;
+                    h2{
+                        color: $White;
+                        font-family: josefin;
+                        width: 80%;
+                    }
+                    &:first-child {
+                        background-image: url(./../images/desktop/image-deep-earth.jpg);
+                    }
+                    &:nth-child(2) {
+                        background-image: url(./../images/desktop/image-night-arcade.jpg);
+                    }
+                    &:nth-child(3) {
+                        background-image: url(./../images/desktop/image-soccer-team.jpg);
+                    }
+                    &:nth-child(4) {
+                        background-image: url(./../images/desktop/image-grid.jpg);
+                    }
+                    &:nth-child(5) {
+                        background-image: url(./../images/desktop/image-from-above.jpg);
+                    }
+                    &:nth-child(6) {
+                        background-image: url(./../images/desktop/image-pocket-borealis.jpg);
+                    }
+                    &:nth-child(7) {
+                        background-image: url(./../images/desktop/image-curiosity.jpg);
+                    }
+                    &:last-child {
+                        background-image: url(./../images/desktop/image-fisheye.jpg);
+                    }
+                }
+            }
+        }
+    }
+    .maid {
+        min-height: 150px;
+        background-color: $Black;
+        padding: 0 100px;
+        div {
+            nav {
+                li a {
+                    text-decoration: none;
+                    color: $White;
+                    position: relative;
+                    &::after {
+                        content: " ";
+                        width: 0%;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        background-color: $White;
+                        height: 3px;
+                        border-radius: 10px;
+                        transition: .8s;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen  and (max-width: 600px) {
+    .wrapper {
+        .home {
+            padding: 20px 12px;
+            background-image: url(./../images/mobile/image-hero.jpg);
+            .master {
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                height: 50px;
+                left: 0;
+                padding: 0 20px;
+                z-index: 10;
+                background-color: $Black;
+                .icon {
+                    position: fixed;
+                    top: 10px;
+                    z-index: 20;
+                }
+                .compass {
+                    background-color: $Black;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 5;
+                    width: 100%;
+                    height: 100vh;
+                    transform: translate(-100%, -100%);
+                    transition: .3s;
+                    perspective: -20px;
+                    transform-style: preserve-3d;
+                    .menu-close {
+                        display: block;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                    }
+                    &.show {
+                        transform: translate(0%);
+                        .point {
+                            transform: scale(1);
+                        }
+                    }
+                    .point a {
+                        font-size: 10vw;
+                        // display: block;
+                    }
+                    .point {
+                        transform: scale(0);
+                        transition: .8s;
+                    }
+                    .point:nth-child(2) {
+                        transition-delay: .3s;
+                    }
+                    .point:nth-child(3) {
+                        transition-delay: .6s;
+                    }
+                    .point:nth-child(4){
+                        transition-delay: .9s;
+                    }
+                    .point:last-child {
+                        transition-delay: 1.2s;
+                    }
+                }
+                .menu-op {
+                    display: block;
+                    > * {
+                        transform: translateY(10px);
+                    }
+                }
+            }
+            .poster {
+                .poster-main .title {
+                    font-size: 3rem;
+                }
+            }
+        }
+        .content {
+            padding: 0 12px;
+            .about {
+                .pictogram {
+                    width: 100%;
+                    min-height: 400px;
+                }
+                .pictogram-explanation {
+                    position: static;
+                }
+            }
+            .creations {
+                .gallery {
+                    gap: 10px;
+                    .single {
+                        width: 100%;
+                        height: 200px;
+                        background-position: center;
+                        background-size: cover;
+                        &:first-child {
+                            background-image: url(./../images/mobile/image-deep-earth.jpg);
+                        }
+                        &:nth-child(2) {
+                            background-image: url(./../images/mobile/image-night-arcade.jpg);
+                        }
+                        &:nth-child(3) {
+                            background-image: url(./../images/mobile/image-soccer-team.jpg);
+                        }
+                        &:nth-child(4) {
+                            background-image: url(./../images/mobile/image-grid.jpg);
+                        }
+                        &:nth-child(5) {
+                            background-image: url(./../images/mobile/image-from-above.jpg);
+                        }
+                        &:nth-child(6) {
+                            background-image: url(./../images/mobile/image-pocket-borealis.jpg);
+                        }
+                        &:nth-child(7) {
+                            background-image: url(./../images/mobile/image-curiosity.jpg);
+                        }
+                        &:last-child {
+                            background-image: url(./../images/mobile/image-fisheye.jpg);
+                        }
+                    }
+                }
+            }
+        }
+        .maid {
+            min-height: 150px;
+            background-color: $Black;
+            padding: 20px 12px;
+            div {
+                nav {
+                    li a {
+                        text-decoration: none;
+                        color: $White;
+                        position: relative;
+                        &::after {
+                            content: " ";
+                            width: 0%;
+                            position: absolute;
+                            bottom: -15px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            background-color: $White;
+                            height: 3px;
+                            border-radius: 10px;
+                            transition: .8s;
+                        }
+                        &:hover {
+                            &::after {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

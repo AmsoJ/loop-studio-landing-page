@@ -1,0 +1,318 @@
+@font-face {
+  font-family: alata;
+  src: url(./Alata-Regular.ttf);
+}
+@font-face {
+  font-family: josefin;
+  src: url(./JosefinSans-Light.ttf);
+}
+.isReveal {
+  clip-path: circle(10px at 80% 90%);
+  transition: clip-path 2s;
+}
+
+.reveal {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+.wrapper .home {
+  height: 100vh;
+  background-image: url(./../images/desktop/image-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 70px 100px;
+}
+.wrapper .home .master .compass .menu-close {
+  display: none;
+}
+.wrapper .home .master .compass .point a {
+  font-family: alata;
+  text-decoration: none;
+}
+.wrapper .home .master .compass .point a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  width: 0px;
+  height: 5px;
+  transition: 0.5s;
+}
+.wrapper .home .master .compass .point a:hover::after {
+  width: 50%;
+}
+.wrapper .home .master .menu-op {
+  display: none;
+}
+.wrapper .home .poster {
+  height: 100%;
+}
+.wrapper .home .poster .poster-main {
+  height: min-content;
+  border: 3px hsl(0, 0%, 100%) solid;
+}
+.wrapper .home .poster .poster-main .title {
+  font-size: 4vw;
+  font-family: alata;
+}
+.wrapper .content {
+  min-height: 50vh;
+  background-color: hsl(0, 0%, 100%);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 200px;
+}
+.wrapper .content .about {
+  min-height: 400px;
+}
+.wrapper .content .about .pictogram {
+  background-image: url(./../images/desktop/image-interactive.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .content .about .pictogram-explanation {
+  position: absolute;
+  min-height: min-content;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 100%);
+}
+.wrapper .content .about .pictogram-explanation .explain-title {
+  font-family: josefin;
+  font-size: 3vw;
+  color: hsl(0, 0%, 41%);
+}
+.wrapper .content .about .pictogram-explanation .explanation-text {
+  font-family: josefin;
+  color: hsl(0, 0%, 55%);
+  font-size: 15px;
+}
+.wrapper .content .creations {
+  margin-top: 100px;
+}
+.wrapper .content .creations header .creations-title {
+  font-family: josefin;
+  font-size: 3vw;
+  color: hsl(0, 0%, 0%);
+}
+.wrapper .content .creations header button {
+  background-color: hsl(0, 0%, 0%);
+  font-family: alata;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  height: 40px;
+  padding: 0 24px;
+}
+.wrapper .content .creations .gallery {
+  gap: 10px;
+}
+.wrapper .content .creations .gallery .single {
+  width: calc(25% - 15px);
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper .content .creations .gallery .single h2 {
+  color: hsl(0, 0%, 100%);
+  font-family: josefin;
+  width: 80%;
+}
+.wrapper .content .creations .gallery .single:first-child {
+  background-image: url(./../images/desktop/image-deep-earth.jpg);
+}
+.wrapper .content .creations .gallery .single:nth-child(2) {
+  background-image: url(./../images/desktop/image-night-arcade.jpg);
+}
+.wrapper .content .creations .gallery .single:nth-child(3) {
+  background-image: url(./../images/desktop/image-soccer-team.jpg);
+}
+.wrapper .content .creations .gallery .single:nth-child(4) {
+  background-image: url(./../images/desktop/image-grid.jpg);
+}
+.wrapper .content .creations .gallery .single:nth-child(5) {
+  background-image: url(./../images/desktop/image-from-above.jpg);
+}
+.wrapper .content .creations .gallery .single:nth-child(6) {
+  background-image: url(./../images/desktop/image-pocket-borealis.jpg);
+}
+.wrapper .content .creations .gallery .single:nth-child(7) {
+  background-image: url(./../images/desktop/image-curiosity.jpg);
+}
+.wrapper .content .creations .gallery .single:last-child {
+  background-image: url(./../images/desktop/image-fisheye.jpg);
+}
+.wrapper .maid {
+  min-height: 150px;
+  background-color: hsl(0, 0%, 0%);
+  padding: 0 100px;
+}
+.wrapper .maid div nav li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+}
+.wrapper .maid div nav li a::after {
+  content: " ";
+  width: 0%;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: hsl(0, 0%, 100%);
+  height: 3px;
+  border-radius: 10px;
+  transition: 0.8s;
+}
+.wrapper .maid div nav li a:hover::after {
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .home {
+    padding: 20px 12px;
+    background-image: url(./../images/mobile/image-hero.jpg);
+  }
+  .wrapper .home .master {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 50px;
+    left: 0;
+    padding: 0 20px;
+    z-index: 10;
+    background-color: hsl(0, 0%, 0%);
+  }
+  .wrapper .home .master .icon {
+    position: fixed;
+    top: 10px;
+    z-index: 20;
+  }
+  .wrapper .home .master .compass {
+    background-color: hsl(0, 0%, 0%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-100%, -100%);
+    transition: 0.3s;
+    perspective: -20px;
+    transform-style: preserve-3d;
+  }
+  .wrapper .home .master .compass .menu-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .wrapper .home .master .compass.show {
+    transform: translate(0%);
+  }
+  .wrapper .home .master .compass.show .point {
+    transform: scale(1);
+  }
+  .wrapper .home .master .compass .point a {
+    font-size: 10vw;
+  }
+  .wrapper .home .master .compass .point {
+    transform: scale(0);
+    transition: 0.8s;
+  }
+  .wrapper .home .master .compass .point:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .wrapper .home .master .compass .point:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+  .wrapper .home .master .compass .point:nth-child(4) {
+    transition-delay: 0.9s;
+  }
+  .wrapper .home .master .compass .point:last-child {
+    transition-delay: 1.2s;
+  }
+  .wrapper .home .master .menu-op {
+    display: block;
+  }
+  .wrapper .home .master .menu-op > * {
+    transform: translateY(10px);
+  }
+  .wrapper .home .poster .poster-main .title {
+    font-size: 3rem;
+  }
+  .wrapper .content {
+    padding: 0 12px;
+  }
+  .wrapper .content .about .pictogram {
+    width: 100%;
+    min-height: 400px;
+  }
+  .wrapper .content .about .pictogram-explanation {
+    position: static;
+  }
+  .wrapper .content .creations .gallery {
+    gap: 10px;
+  }
+  .wrapper .content .creations .gallery .single {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+  .wrapper .content .creations .gallery .single:first-child {
+    background-image: url(./../images/mobile/image-deep-earth.jpg);
+  }
+  .wrapper .content .creations .gallery .single:nth-child(2) {
+    background-image: url(./../images/mobile/image-night-arcade.jpg);
+  }
+  .wrapper .content .creations .gallery .single:nth-child(3) {
+    background-image: url(./../images/mobile/image-soccer-team.jpg);
+  }
+  .wrapper .content .creations .gallery .single:nth-child(4) {
+    background-image: url(./../images/mobile/image-grid.jpg);
+  }
+  .wrapper .content .creations .gallery .single:nth-child(5) {
+    background-image: url(./../images/mobile/image-from-above.jpg);
+  }
+  .wrapper .content .creations .gallery .single:nth-child(6) {
+    background-image: url(./../images/mobile/image-pocket-borealis.jpg);
+  }
+  .wrapper .content .creations .gallery .single:nth-child(7) {
+    background-image: url(./../images/mobile/image-curiosity.jpg);
+  }
+  .wrapper .content .creations .gallery .single:last-child {
+    background-image: url(./../images/mobile/image-fisheye.jpg);
+  }
+  .wrapper .maid {
+    min-height: 150px;
+    background-color: hsl(0, 0%, 0%);
+    padding: 20px 12px;
+  }
+  .wrapper .maid div nav li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    position: relative;
+  }
+  .wrapper .maid div nav li a::after {
+    content: " ";
+    width: 0%;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: hsl(0, 0%, 100%);
+    height: 3px;
+    border-radius: 10px;
+    transition: 0.8s;
+  }
+  .wrapper .maid div nav li a:hover::after {
+    width: 50%;
+  }
+}
