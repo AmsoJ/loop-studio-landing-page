@@ -1,7 +1,7 @@
 // selected nodes
-const menuOpenBtn : any = document.querySelector(".menu-open");
-const menuCloseBtn : any = document.querySelector(".menu-close");
-const menu : any = document.querySelector(".compass");
+const menuOpenBtn = document.querySelector(".menu-open") as HTMLButtonElement;
+const menuCloseBtn = document.querySelector(".menu-close") as HTMLButtonElement;
+const menu  = document.querySelector("nav") as HTMLElement;
 // functions
 const triggerMenu = (action : string) => {
     action === "open" ? menu.classList.add("show") : menu.classList.remove("show");
@@ -11,9 +11,7 @@ window.addEventListener("scroll", () => {
     let pageY = window.scrollY;
     let revealNodes : any = document.getElementsByClassName("isReveal");
     for(let controlVar = 0; controlVar < revealNodes.length; controlVar++) {
-       revealNodes[controlVar].offsetParent = document.body;
         if(revealNodes[controlVar].offsetParent == document.body) {
-            // console.log("yes");
             if(pageY >= ((revealNodes[controlVar].offsetTop) - 400)) {
                 revealNodes[controlVar].classList.add("reveal");
             }

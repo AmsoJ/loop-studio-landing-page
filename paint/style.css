@@ -9,10 +9,12 @@
 .isReveal {
   clip-path: circle(10px at 80% 90%);
   transition: clip-path 2s;
+  opacity: 0;
 }
 
 .reveal {
   clip-path: circle(100% at 50% 50%);
+  opacity: 1;
 }
 
 .wrapper {
@@ -264,6 +266,9 @@
   }
   .wrapper .content .about .pictogram-explanation {
     position: static;
+  }
+  .wrapper .content .creations header .creations-title {
+    font-size: 2rem;
   }
   .wrapper .content .creations .gallery {
     gap: 10px;

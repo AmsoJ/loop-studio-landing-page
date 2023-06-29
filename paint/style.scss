@@ -14,9 +14,11 @@
 .isReveal {
     clip-path: circle(10px at 80% 90%);
     transition: clip-path 2s;
+    opacity: 0;
 }
 .reveal {
     clip-path: circle(100% at 50% 50%);
+    opacity: 1;
 }
 .wrapper {
     min-height: 100vh;
@@ -291,6 +293,11 @@
                 }
             }
             .creations {
+                header {
+                    .creations-title {
+                        font-size: 2rem;
+                    }
+                }
                 .gallery {
                     gap: 10px;
                     .single {
